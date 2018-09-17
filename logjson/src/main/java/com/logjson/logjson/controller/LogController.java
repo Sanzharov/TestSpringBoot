@@ -26,7 +26,8 @@ public class LogController {
     @GetMapping("/api/search")
     public String logSearch(@RequestParam String q, Map<String, Object> model) throws IOException{
 
-        List<String> listLine = Files.readAllLines(Paths.get("..\\logjson\\logjson\\src\\main\\resources\\logs\\log.txt"));
+        List<String> listLine = Files.readAllLines
+                (Paths.get("..\\TestSpringBoot\\logjson\\src\\main\\resources\\logs\\log.txt"));
         LogFilter logFilter = new LogFilter();
 
         String filte = q;
